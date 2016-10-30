@@ -1,0 +1,43 @@
+<f:flashMessages/>
+<h1>{date.title}</h1>
+<p>
+	<div class="calMedia--cat" style="background-color: {date.category.color};" title="{date.category.title}">&nbsp;</div>
+	<f:if condition="{date.diffDates}">
+		<f:then>
+			<f:format.date format="d.m. H:i">{date.date}</f:format.date>&nbsp;-
+			<f:format.date format="d.m.Y H:i">{date.endDate}</f:format.date>
+		</f:then>
+		<f:else>
+			<f:format.date format="d.m.Y H:i">{date.date}</f:format.date>
+		</f:else>
+	</f:if>
+</p>
+<f:if condition="{date.location}">
+	<f:then>
+		<p>
+			<f:translate key="detail.place.label" default="Place"/>: {date.dateLocation}
+		</p>
+	</f:then>
+</f:if>
+<f:if condition="{date.description}">
+	<f:then>
+		<p>
+			<f:format.html>{date.description}</f:format.html>
+		</p>
+	</f:then>
+</f:if>
+<f:if condition="{date.dateAddress}">
+	<f:then>
+		<div id="map"></div>
+		<script>
+			var homeAddress = '{googleHAddress}';
+			var homeTitle = '{googleHTitle}';
+			var dateLocation = '{date.dateLocation}';
+			var dateAddress = '{date.dateAddress}';
+			var transLink = '{f:translate(key:"detail.google.link", default:"Display on google maps.")}'
+		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key={googleApi}&libraries=visualization&callback=initMap"></script>
+	</f:then>
+</f:if>
+<p><f:link.action controller="Date" action="show" format="ics" arguments="{date:date, prev:prev}">Test.ics</f:link.action></p>
+<p><f:link.action controller="{prev}" action="list"><f:translate key="detail.back.link" default="back"/></f:link.action></p>

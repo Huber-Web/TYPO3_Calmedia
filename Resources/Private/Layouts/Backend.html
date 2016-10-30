@@ -1,0 +1,26 @@
+<f:be.container loadJQuery="true" 
+	includeCssFiles="{0: '{f:uri.resource(path:\'css/backend.css\')}'}" 
+	includeJsFiles="{0: '{f:uri.resource(path:\'js/backend.js\')}'}">
+	<f:flashMessages />
+	
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div class="typo3-docheader-functions">
+				<div class="left">
+					<f:render section="functionsLeft" optional="true"/>
+				</div>
+			</div>
+			<div class="typo3-docheader-buttons">
+				<div class="left">
+					<f:render section="crtlBtn" optional="true"/>
+				</div>
+				<div class="right"></div>
+			</div>
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody">
+				<f:render section="body" />
+			</div>
+		</div>
+	</div>
+</f:be.container>

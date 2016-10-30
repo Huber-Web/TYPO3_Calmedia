@@ -1,0 +1,17 @@
+<f:layout name="Export" />
+
+<f:section name="content">
+BEGIN:VEVENT
+CREATED:<f:format.date format="Ymd\THis\Z">{current}</f:format.date>
+LAST-MODIFIED:<f:format.date format="Ymd\THis\Z">{current}</f:format.date>
+DTSTAMP:<f:format.date format="Ymd\THis\Z">{current}</f:format.date>
+UID:<f:format.date format="YmdHis">{current}</f:format.date>-{date.uid}@<tv:domain/>
+LOCATION:{date.dateAddress}
+SUMMARY:{date.title}
+DESCRIPTION:<f:format.stripTags>{date.description}</f:format.stripTags>
+DTSTART;TZID=Europe/Berlin:<f:format.date format="Ymd\THis\Z">{date.date}</f:format.date>
+DTEND;TZID=Europe/Berlin:<f:format.date format="Ymd\THis\Z">{date.endDate}</f:format.date>
+TRANSP:OPAQUE
+CLASS:PUBLIC
+END:VEVENT
+</f:section>

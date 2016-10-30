@@ -1,0 +1,40 @@
+{namespace cal = PfarreNg\Calmedia\ViewHelpers}
+
+<f:layout name="Backend" />
+
+<f:section name="functionsLeft">
+	<f:render partial="Backend/Menu"/>
+</f:section>
+
+<f:section name="body">
+	<h1><f:translate key="LLL:EXT:calmedia/Resources/Private/Language/locallang_backend.xlf:type.header" default="Types"/></h1>
+	<div class="table-fit">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th style="width: 2em"><f:translate key="LLL:EXT:calmedia/Resources/Private/Language/locallang_backend.xlf:type.color.label" default="Color"/></th>
+					<th style="width: 50em"><f:translate key="LLL:EXT:calmedia/Resources/Private/Language/locallang_backend.xlf:type.title.label" default="Title"/></th>
+					<th style="width: 2em">
+						<div class="btn-group">
+							<f:be.buttons.icon uri="{cal:editRecord(parameters: 'edit[tx_calmedia_domain_model_typ][{pid}]=new&returnUrl={returnUrl}')}" icon="actions-edit-add" additionalAttributes="{class: 'btn btn-default'}" />
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<f:for each="{typs}" as="typ">
+					<tr>
+						<td style="width: 2em; background-color: {typ.color}">&nbsp;</td>
+						<td style="width: 50em">{typ.title}</td>
+						<td style="width: 2em">
+							<div class="btn-group">
+								<f:be.buttons.icon uri="{cal:editRecord(parameters: 'edit[tx_calmedia_domain_model_typ][{typ.uid}]=edit&returnUrl={returnUrl}')}" icon="actions-open" additionalAttributes="{class: 'btn btn-default'}" />
+								<cal:remove object="{typ}" class="tx_calmedia_domain_model_typ"/>
+							</div>
+						</td>
+					</tr>
+				</f:for>
+			</tbody>
+		</table>
+	</div>
+</f:section>

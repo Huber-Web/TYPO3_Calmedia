@@ -1,0 +1,47 @@
+{namespace cal = PfarreNg\Calmedia\ViewHelpers}
+
+<f:layout name="Backend" />
+
+<f:section name="functionsLeft">
+	<f:render partial="Backend/Menu"/>
+</f:section>
+
+<f:section name="crtlBtn">
+</f:section>
+
+<f:section name="body">
+	<h1><f:translate key="LLL:EXT:calmedia/Resources/Private/Language/locallang_backend.xlf:holiday_template.header" default="Holiday Templates"/></h1>
+	<div class="table-fit">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th style="width: 50em">
+						<f:translate key="LLL:EXT:calmedia/Resources/Private/Language/locallang_backend.xlf:holiday_template.title.label" default="Title"/>
+					</th>
+					<th style="width: 2em">
+						<div class="btn-group">
+							<f:be.buttons.icon uri="{cal:editRecord(parameters: 'edit[tx_calmedia_domain_model_holidaytemplate][{pid}]=new&returnUrl={returnUrl}')}" icon="actions-edit-add" additionalAttributes="{class: 'btn btn-default'}" />
+							<span class="btn btn-default" style="height: 32px; padding-top: 5px;" onclick="document.genHolForm.submit();"><f:image src="/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-synchronize.svg" /></span>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<f:for each="{holidayTemplates}" as="holidayTemplate">
+					<tr>
+						<td style="width: 50em">{holidayTemplate.name}</td>
+						<td style="width: 2em">
+							<div class="btn-group" role="btn-group">
+								<f:be.buttons.icon uri="{cal:editRecord(parameters: 'edit[tx_calmedia_domain_model_holidaytemplate][{holidayTemplate.uid}]=edit&returnUrl={returnUrl}')}" icon="actions-open" additionalAttributes="{class: 'btn btn-default'}" />
+								<cal:remove object="{holidayTemplate}" class="tx_calmedia_domain_model_holidaytemplate"/>
+							</div>
+						</td>
+					</tr>
+				</f:for>
+			</tbody>
+		</table>
+	</div>
+	<f:form action="generateHolidays" name="genHolForm">
+		<f:form.hidden property="pid" value="{pid}"/>
+	</f:form>
+</f:section>

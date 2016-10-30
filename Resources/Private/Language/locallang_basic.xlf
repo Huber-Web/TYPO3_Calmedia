@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="place.header">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="place.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="place.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="section.header">
+				<source>Section</source>
+			</trans-unit>
+			<trans-unit id="section.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="typ.header">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="typ.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="typ.color">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.header">
+				<source>Holiday template</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference">
+				<source>Reference</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference.month">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference.weekMonth">
+				<source>Week of month</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference.eastern">
+				<source>Eastern</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.days_to_eastern">
+				<source>Days to eastern</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.month">
+				<source>Month</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.day">
+				<source>Day</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.week_at_month">
+				<source>Week of month</source>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.day_at_week">
+				<source>Weekday</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

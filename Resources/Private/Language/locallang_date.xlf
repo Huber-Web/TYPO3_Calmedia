@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="header">
+				<source>Dates</source>
+			</trans-unit>
+			<trans-unit id="tab.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tab.addition">
+				<source>Addition</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="location">
+				<source>Location Name</source>
+			</trans-unit>
+			<trans-unit id="address">
+				<source>Location Address</source>
+			</trans-unit>
+			<trans-unit id="end_date">
+				<source>End date</source>
+			</trans-unit>
+			<trans-unit id="category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="sections">
+				<source>Sections</source>
+			</trans-unit>
+			<trans-unit id="place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="place.other">
+				<source>Other</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

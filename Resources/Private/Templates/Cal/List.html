@@ -1,0 +1,121 @@
+{namespace tv=PfarreNg\Calmedia\ViewHelpers}
+
+<f:if condition="{cat}">
+	<f:then>
+		<h2>{cat.title}</h2>
+	</f:then>
+</f:if>
+
+<ul class="calMedia--list all">
+	<f:for each="{dates}" as="year" iteration="count">
+		<li>
+			<div class="calMedia--list-month all year">{year.year}</div>
+		</li>
+		<f:for each="{year}" as="month" iteration="countY">
+			<f:if condition="{countY.isFirst}==0">
+				<f:then>
+					<f:if condition="{count.index} == 0">
+						<f:then>
+							<f:if condition="{countY.index} == 2">
+								<f:then>
+									<li class="calMedia--list-mon all action">
+										<div class="calMedia--list-month all" onclick="calColExt('day.{count.index}{countY.index}','block');"><f:translate key="month.<f:format.date format='m' date='{month.month}' />" default="<f:format.date format='F' date='{month.month}' />"/></div>
+									</li>
+									<ul class="calMedia--list-day all cur" id="day.{count.index}{countY.index}">
+								</f:then>
+								<f:else>	
+									<li class="calMedia--list-mon all action">
+										<div class="calMedia--list-month all" onclick="calColExt('day.{count.index}{countY.index}','none');"><f:translate key="month.<f:format.date format='m' date='{month.month}' />" default="<f:format.date format='F' date='{month.month}' />"/></div>
+									</li>
+									<ul class="calMedia--list-day all" id="day.{count.index}{countY.index}">
+								</f:else>
+							</f:if>
+						</f:then>
+						<f:else>
+							<li class="calMedia--list-mon all action">
+								<div class="calMedia--list-month all" onclick="calColExt('day.{count.index}{countY.index}','none');"><f:translate key="month.<f:format.date format='m' date='{month.month}' />" default="<f:format.date format='F' date='{month.month}' />"/></div>
+							</li>
+							<ul class="calMedia--list-day all" id="day.{count.index}{countY.index}">
+						</f:else>
+					</f:if>
+						<f:for each="{month}" as="day" iteration="countM">
+							<f:if condition="{countM.isFirst}==0">
+								<f:then>
+									<li>
+										<f:if condition="{tv:hol(key: day.day, array: holidays)}">
+											<f:then>
+												<f:link.action controller="Holiday" action="show" arguments="{holidays: holidays, date: day.day, prev:'Cal'}">
+													<div class="calMedia--list-day-item holiday all action {f:if(condition: countM.isEven, then: 'even')}{f:if(condition: countM.isOdd, then: 'odd')}" onmouseover='calOpenOverlay("<tv:hol key="{day.day}" array="{holidays}"/>", "<f:format.date format="d.m.Y">{day.day}</f:format.date>", "<tv:url controller="Holiday" action="show" prev="Cal" holidays="{holidays}" key="{day.day}"/>");' onmouseout="calCloseOverlay();" onclick='window.open("<tv:url controller="Holiday" action="show" prev="Cal" holidays="{holidays}" key="{day.day}"/>","_self")'>
+														<f:translate key="day.<f:format.date format='N' date='{day.day}' />" default="<f:format.date format='D' date='{day.day}' />"/>, <f:format.date format="d.">{day.day}</f:format.date>
+													</div>
+												</f:link.action>
+											</f:then>
+											<f:else>
+												<f:if condition="<f:format.date format='N' date='{day.day}' /> == 7">
+													<f:then>
+														<div class="calMedia--list-day-item holiday all {f:if(condition: countM.isEven, then: 'even')}{f:if(condition: countM.isOdd, then: 'odd')}">
+															<f:translate key="day.<f:format.date format='N' date='{day.day}' />" default="<f:format.date format='D' date='{day.day}' />"/>, <f:format.date format="d.">{day.day}</f:format.date>
+														</div>
+													</f:then>
+													<f:else>
+														<div class="calMedia--list-day-item all {f:if(condition: countM.isEven, then: 'even')}{f:if(condition: countM.isOdd, then: 'odd')}">
+															<f:translate key="day.<f:format.date format='N' date='{day.day}' />" default="<f:format.date format='D' date='{day.day}' />"/>, <f:format.date format="d.">{day.day}</f:format.date>
+														</div>
+													</f:else>
+												</f:if>
+											</f:else>
+										</f:if>
+									</li>
+									<ul class="calMedia--dates all">
+										<f:for each="{day.date}" as="date" iteration="countD">
+											<f:if condition="{date.diffDates}">
+												<f:then>
+													<li class="calMedia--list-item all {f:if(condition: countD.isEven, then: 'even')}{f:if(condition: countD.isOdd, then: 'odd')}" onmouseover='calOpenOverlay("<tv:list text="{date.title}"/>", "<f:format.date format="d.m. H:i">{date.date}</f:format.date>&nbsp;-&nbsp;<f:format.date format="d.m.Y H:i">{date.endDate}</f:format.date>", "<tv:url controller="Date" action="show" prev="Cal" date="{date}"/>", "<tv:list text="{date.dateLocation}"/>", "<tv:list text="{date.description}"/>");' onmouseout="calCloseOverlay();" onclick="window.open('<tv:url controller="Date" action="show" prev="Cal" date="{date}"/>','_self');">
+												</f:then>
+												<f:else>
+													<li class="calMedia--list-item all {f:if(condition: countD.isEven, then: 'even')}{f:if(condition: countD.isOdd, then: 'odd')}" onmouseover='calOpenOverlay("<tv:list text="{date.title}"/>", "<f:format.date format="d.m.Y H:i">{date.date}</f:format.date>", "<tv:url controller="Date" action="show" prev="Cal" date="{date}"/>", "<tv:list text="{date.dateLocation}"/>", "");' onmouseout="calCloseOverlay();" onclick="window.open('<tv:url controller="Date" action="show" prev="Cal" date="{date}"/>','_self');">
+												</f:else>
+											</f:if>
+												<div class="calMedia--content all">
+													<div class="calMedia--time all">
+														<f:format.date format="H:i">{date.date}</f:format.date>
+														<f:if condition="{date.diffDates}">
+															<f:then>
+																&nbsp;-&nbsp;<f:format.date format="d.m. H:i">{date.endDate}</f:format.date>
+															</f:then>
+														</f:if>
+													</div>
+													<div class="calMedia--cat" style="background-color: {date.category.color};">&nbsp;</div>
+													<div class="calMedia--title all">{date.title}</div>
+												</div>
+											</li>
+										</f:for>
+									</ul>
+								</f:then>
+							</f:if>
+						</f:for>
+					</ul>
+				</f:then>
+			</f:if>
+		</f:for>
+	</f:for>
+</ul>
+
+<p style="clear: both;">
+<f:if condition="{cat}">
+	<f:then>
+		<div class="calMedia--leg" onclick="window.open('<tv:url controller="Cal" action="list" prev="Cal"/>','_self');"><div class="calMedia--cat">&nbsp;</div><div class="calMedia--leg_title"><f:translate key="list_cat.all.link" default="All"/></div></div>
+	</f:then>
+</f:if>
+<f:for each="{types}" as="typ">
+	<div class="calMedia--leg" onclick="window.open('<tv:url controller="Cal" action="list" prev="Cal" typ="{typ}"/>','_self');"><div class="calMedia--cat" style="background-color: {typ.color};">&nbsp;</div><div class="calMedia--leg_title">{typ.title}</div></div>
+</f:for>
+</p>
+
+<div class="calMedia--overlay" id="calMedia--overlay" onmouseover="calHoldOverlay();" onmouseout="calCloseOverlay();" onclick="calClickOverlay();">
+	<h1 id="calMedia--overlay-title"></h1>
+	<p id="calMedia--overlay-date"></p>
+	<p id="calMedia--overlay-location"></p>
+	<p id="calMedia--overlay-link"><a onclick="calClickOverlay();"><f:translate key="list.details.link" default="Details here."/></a></p>
+	<div id="calMedia--overlay-url" style="display: none;"></div>
+</div>

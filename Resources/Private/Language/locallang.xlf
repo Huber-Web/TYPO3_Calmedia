@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="list.details.link">
+				<source>Details here.</source>
+			</trans-unit>
+			<trans-unit id="list_cat.all.link">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="detail.place.label">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="detail.back.link">
+				<source>back</source>
+			</trans-unit>
+			<trans-unit id="detail.google.link">
+				<source>Display on google maps.</source>
+			</trans-unit>	
+			<trans-unit id="day.1">
+				<source>Mun</source>
+			</trans-unit>
+			<trans-unit id="day.2">
+				<source>Tue</source>
+			</trans-unit>
+			<trans-unit id="day.3">
+				<source>Wed</source>
+			</trans-unit>
+			<trans-unit id="day.4">
+				<source>Thu</source>
+			</trans-unit>
+			<trans-unit id="day.5">
+				<source>Fri</source>
+			</trans-unit>
+			<trans-unit id="day.6">
+				<source>Sat</source>
+			</trans-unit>
+			<trans-unit id="day.7">
+				<source>Sun</source>
+			</trans-unit>	
+			<trans-unit id="day.full.1">
+				<source>Munday</source>
+			</trans-unit>
+			<trans-unit id="day.full.2">
+				<source>Tuesday</source>
+			</trans-unit>
+			<trans-unit id="day.full.3">
+				<source>Wednesday</source>
+			</trans-unit>
+			<trans-unit id="day.full.4">
+				<source>Thursday</source>
+			</trans-unit>
+			<trans-unit id="day.full.5">
+				<source>Friday</source>
+			</trans-unit>
+			<trans-unit id="day.full.6">
+				<source>Saturday</source>
+			</trans-unit>
+			<trans-unit id="day.full.7">
+				<source>Sun</source>
+			</trans-unit>
+			<trans-unit id="month.01">
+				<source>January</source>
+			</trans-unit>
+			<trans-unit id="month.02">
+				<source>February</source>
+			</trans-unit>
+			<trans-unit id="month.03">
+				<source>March</source>
+			</trans-unit>
+			<trans-unit id="month.04">
+				<source>April</source>
+			</trans-unit>
+			<trans-unit id="month.05">
+				<source>May</source>
+			</trans-unit>
+			<trans-unit id="month.06">
+				<source>June</source>
+			</trans-unit>
+			<trans-unit id="month.07">
+				<source>July</source>
+			</trans-unit>
+			<trans-unit id="month.08">
+				<source>August</source>
+			</trans-unit>
+			<trans-unit id="month.09">
+				<source>September</source>
+			</trans-unit>
+			<trans-unit id="month.10">
+				<source>October</source>
+			</trans-unit>
+			<trans-unit id="month.11">
+				<source>November</source>
+			</trans-unit>
+			<trans-unit id="month.12">
+				<source>December</source>
+			</trans-unit>
+			<trans-unit id="date_format">
+				<source>m/d/Y</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

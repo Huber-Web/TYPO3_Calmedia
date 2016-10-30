@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="header">
+				<source>Template</source>
+				<target>Vorlage</target>
+			</trans-unit>
+			<trans-unit id="tab.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tab.addition">
+				<source>Addition</source>
+				<target>Zusatz</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="location">
+				<source>Location Name</source>
+				<target>Ort Name</target>
+			</trans-unit>
+			<trans-unit id="address">
+				<source>Location Address</source>
+				<target>Ort Adresse</target>
+			</trans-unit>
+			<trans-unit id="category">
+				<source>Category</source>
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="sections">
+				<source>Sections</source>
+				<target>Bereich</target>
+			</trans-unit>
+			<trans-unit id="place">
+				<source>Place</source>
+				<target>Ort</target>
+			</trans-unit>
+			<trans-unit id="place.other">
+				<source>Other</source>
+				<target>Andere</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

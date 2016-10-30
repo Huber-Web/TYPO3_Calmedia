@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="place.header">
+				<source>Place</source>
+				<target>Ort</target>
+			</trans-unit>
+			<trans-unit id="place.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="place.address">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="section.header">
+				<source>Section</source>
+				<target>Bereich</target>
+			</trans-unit>
+			<trans-unit id="section.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="typ.header">
+				<source>Type</source>
+				<target>Typ</target>
+			</trans-unit>
+			<trans-unit id="typ.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="typ.color">
+				<source>Color</source>
+				<target>Farbe</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.header">
+				<source>Holiday template</source>
+				<target>Feiertag Vorlage</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference">
+				<source>Reference</source>
+				<target>Beziehung</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference.month">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference.weekMonth">
+				<source>Week of month</source>
+				<target>Woche im Monat</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.reference.eastern">
+				<source>Eastern</source>
+				<target>Ostern</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.days_to_eastern">
+				<source>Days to eastern</source>
+				<target>Tage bis Ostern</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.month">
+				<source>Month</source>
+				<target>Monat</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.day">
+				<source>Day</source>
+				<target>Tag</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.week_at_month">
+				<source>Week of month</source>
+				<target>Woche im Monat</target>
+			</trans-unit>
+			<trans-unit id="holidaytemplate.day_at_week">
+				<source>Weekday</source>
+				<target>Wochentag</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

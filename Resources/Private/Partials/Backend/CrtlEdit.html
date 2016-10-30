@@ -1,0 +1,37 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+
+<div class="btn-group">
+	<f:be.buttons.icon uri="{f:uri.action(action:'index')}" icon="actions-close" additionalAttributes="{class: 'btn btn-default btn-sm'}"/>
+</div>
+<div class="btn-group t3js-splitbutton">
+	<span class="btn btn-sm btn-default " onclick="document.{form}.submit();">
+		<span class="t3js-icon icon icon-size-small icon-state-default icon-actions-document-save" data-identifier="actions-document-save">
+			<span class="icon-markup">
+				<core:icon identifier="actions-document-save"/>
+			</span>
+		</span>
+		Speichern
+       </span>
+       <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+           <span class="caret"></span>
+           <span class="sr-only">Toggle Dropdown</span>
+       </button>
+	<ul class="dropdown-menu">
+		<li>
+			<a href="#" class="t3js-editform-submitButton" onclick="document.{form}.action = '{f:uri.action(action:'updateNew')}'; document.{form}.submit();">
+				<core:icon identifier="actions-document-save-new" />
+				Speichern und neue erstellen
+			</a>
+		</li>
+	            
+		<li>
+			<a href="#" class="t3js-editform-submitButton" onclick="document.{form}.action = '{f:uri.action(action:'updateClose')}'; document.{form}.submit();">
+				<core:icon identifier="actions-document-save-close" />
+				Speichern und schlie&szlig;en
+			</a>
+		</li>            
+	</ul>
+</div>
+<div class="btn-group">
+	<f:be.buttons.icon uri="{f:uri.action(action:'delete', arguments:'{object: object}')}" icon="actions-delete" additionalAttributes="{class: 'btn btn-default btn-sm'}" />
+</div>

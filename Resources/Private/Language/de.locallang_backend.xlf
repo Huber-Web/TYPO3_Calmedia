@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="mlang_labels_tablabel">
+				<source>Calendar</source>
+				<target>Kalender</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr">
+				<source>Calendar</source>
+				<target>Kalender</target>
+			</trans-unit>
+			<trans-unit id="mlang_tabs_tab">
+				<source>Calendar</source>
+				<target>Kalender</target>
+			</trans-unit>
+			<trans-unit id="index.date.header">
+				<source>Date</source>
+				<target>Termine</target>
+			</trans-unit>
+			<trans-unit id="index.date.date.label">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="index.date.title.label">
+				<source>Title</source>
+				<target>Überschrift</target>
+			</trans-unit>
+			<trans-unit id="index.template.header">
+				<source>Templates</source>
+				<target>Vorlagen</target>
+			</trans-unit>
+			<trans-unit id="index.template.title.label">
+				<source>Title</source>
+				<target>Überschrift</target>
+			</trans-unit>
+			<trans-unit id="index.holiday.header">
+				<source>Holidays</source>
+				<target>Feiertage</target>
+			</trans-unit>
+			<trans-unit id="index.holiday.date.label">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="index.holiday.title.label">
+				<source>Title</source>
+				<target>Überschrift</target>
+			</trans-unit>
+			<trans-unit id="place.header">
+				<source>Places</source>
+				<target>Orte</target>
+			</trans-unit>
+			<trans-unit id="place.title.label">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="section.header">
+				<source>Sections</source>
+				<target>Bereiche</target>
+			</trans-unit>
+			<trans-unit id="section.title.label">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="type.header">
+				<source>Types</source>
+				<target>Typen</target>
+			</trans-unit>
+			<trans-unit id="type.color.label">
+				<source>Color</source>
+				<target>Farbe</target>
+			</trans-unit>
+			<trans-unit id="type.title.label">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="holiday_template.header">
+				<source>Holiday Templates</source>
+				<target>Feiertag Vorlagen</target>
+			</trans-unit>
+			<trans-unit id="holiday_template.title.label">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

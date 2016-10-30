@@ -1,0 +1,23 @@
+<T3DataStructure>
+	<sheets>
+		<sDef>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Kategory Config</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.section.id>
+					<TCEforms>
+						<label>Kategory</label>
+						<config>
+							<type>select</type>
+							<foreign_table>tx_calmedia_domain_model_section</foreign_table>
+						</config>
+					</TCEforms>
+					</settings.section.id>
+				</el>
+			</ROOT>
+		</sDef>
+	</sheets>
+</T3DataStructure>

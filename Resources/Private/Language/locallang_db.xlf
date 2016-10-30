@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2016-03-13T21:48:13Z" product-name="calmedia">
+		<header/>
+		<body>
+			<trans-unit id="tx_calmedia_domain_model_date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.end_date">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.sections">
+				<source>Sections</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_typ">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_typ.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_typ.color">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_section">
+				<source>Section</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_section.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_section.version">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holiday">
+				<source>Holiday</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holiday.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holiday.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template">
+				<source>Template</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.description_short">
+				<source>Description Short</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.sections">
+				<source>Sections</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_template.place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_place.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_place.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate">
+				<source>Holiday Template</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.reference">
+				<source>Reference</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.days_to_eastern">
+				<source>Days To Eastern</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.month">
+				<source>Month</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.day">
+				<source>Day</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.week_at_month">
+				<source>Week At Month</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holidaytemplate.day_at_week">
+				<source>Day At Week</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.adress">
+				<source>Adress</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.all_day">
+				<source>All Day</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.diff_dates">
+				<source>Diff Dates</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.description_short">
+				<source>Description Short</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_typ.version">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_holiday.version">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="tx_calmedia_domain_model_date.version">
+				<source>Version</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

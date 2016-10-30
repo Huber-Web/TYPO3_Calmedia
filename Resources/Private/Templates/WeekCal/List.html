@@ -1,0 +1,84 @@
+{namespace tv=PfarreNg\Calmedia\ViewHelpers}
+
+<f:if condition="{cat}">
+	<f:then>
+		<h2>{cat.title}</h2>
+	</f:then>
+</f:if>
+
+<ul class="calMedia--list week">
+	<f:for each="{dates}" as="days">
+		<f:if condition="{tv:hol(key: days.date, array: holidays)}">
+			<f:then>
+				<li class="calMedia--list-item week holiday" onmouseover='calOpenOverlay("<tv:hol key="{days.date}" array="{holidays}"/>", "<f:format.date format="d.m.Y">{days.date}</f:format.date>", "<tv:url controller="Holiday" action="show" prev="WeekCal" holidays="{holidays}" key="{days.date}"/>");' onmouseout="calCloseOverlay();" onclick='window.open("<tv:url controller="Holiday" action="show" prev="WeekCal" holidays="{holidays}" key="{days.date}"/>","_self")'>
+					<div class="calMedia--content week">
+						<div class="calMedia--date week holiday">
+							<f:translate key="day.<f:format.date format='N' date='{days.date}' />" default="<f:format.date format='D' date='{days.date}' />"/>, 
+							<f:format.date format="d.m.">{days.date}</f:format.date>
+						</div>
+						<div class="calMedia--cat week">&nbsp;</div>
+						<div class="calMedia--title week holiday">{tv:hol(key: days.date, array: holidays)}</div>
+					</div>
+				</li>
+			</f:then>
+		</f:if>
+		<f:for each="{days.result}" as="date" iteration="countD">
+			<f:if condition="{date.diffDates}">
+				<f:then>
+					<li class="calMedia--list-item week"  onmouseover='calOpenOverlay("<tv:list text="{date.title}"/>", "<f:format.date format="d.m. H:i">{date.date}</f:format.date>&nbsp;-&nbsp;<f:format.date format="d.m.Y H:i">{date.endDate}</f:format.date>", "<tv:url controller="Date" action="show" prev="WeekCal" date="{date}"/>", "<tv:list text="{date.location}"/>", "<tv:list text="{date.descriptionShort}"/>");' onmouseout="calCloseOverlay();" onclick="window.open('<tv:url controller="Date" action="show" prev="WeekCal" date="{date}"/>','_self')">
+				</f:then>
+				<f:else>
+					<li class="calMedia--list-item week"  onmouseover='calOpenOverlay("<tv:list text="{date.title}"/>", "<f:format.date format="d.m.Y H:i">{date.date}</f:format.date>", "<tv:url controller="Date" action="show" prev="WeekCal" date="{date}"/>", "<tv:list text="{date.location}"/>", "<tv:list text="{date.descriptionShort}"/>");' onmouseout="calCloseOverlay();" onclick="window.open('<tv:url controller="Date" action="show" prev="WeekCal" date="{date}"/>','_self')">
+					
+				</f:else>
+			</f:if>
+				<div class="calMedia--content week">
+					<f:if condition="{tv:hol(key: days.date, array: holidays)}">
+						<f:then>
+							<div class="calMedia--date week holiday">
+						</f:then>
+						<f:else>
+							<f:if condition="{f:format.date(format: 'N', date: date.date)} == 7">
+								<f:then>
+									<div class="calMedia--date week holiday">
+								</f:then>
+								<f:else>
+									<div class="calMedia--date week">
+								</f:else>
+							</f:if>
+						</f:else>
+					</f:if>
+						<f:translate key="day.<f:format.date format='N' date='{date.date}' />" default="<f:format.date format='D' date='{date.date}' />"/>, 
+						<f:format.date format="d.m. H:i">{date.date}</f:format.date>
+						<f:if condition="{date.diffDates}">
+							<f:then>
+								&nbsp;-&nbsp;<f:format.date format="d.m.Y H:i">{date.endDate}</f:format.date>
+							</f:then>
+						</f:if>
+					</div>
+					<div class="calMedia--cat week" style="background-color: {date.category.color}">&nbsp;</div>
+					<div class="calMedia--title week">{date.title}</div>
+				</div>
+			</li>
+		</f:for>
+	</f:for>
+</ul>
+
+<p>
+<f:if condition="{cat}">
+	<f:then>
+		<div class="calMedia--leg" onclick="window.open('<tv:url controller="WeekCal" action="list" prev="WeekCal"/>','_self')"><div class="calMedia--cat">&nbsp;</div><div class="calMedia--leg_title">Alle</div></div>
+	</f:then>
+</f:if>
+<f:for each="{types}" as="typ">
+	<div class="calMedia--leg" onclick="window.open('<tv:url controller="WeekCal" action="list" prev="WeekCal" typ="{typ}"/>','_self')"><div class="calMedia--cat" style="background-color: {typ.color};">&nbsp;</div><div class="calMedia--leg_title">{typ.title}</div></div>
+</f:for>
+</p>
+
+<div class="calMedia--overlay" id="calMedia--overlay" onmouseover="calHoldOverlay();" onmouseout="calCloseOverlay();" onclick="calClickOverlay();">
+	<h1 id="calMedia--overlay-title"></h1>
+	<p id="calMedia--overlay-date"></p>
+	<p id="calMedia--overlay-location"></p>
+	<p id="calMedia--overlay-descriptShort" style="font-weight: bold;"></p>
+	<div id="calMedia--overlay-url" style="display: none;"></div>
+</div>

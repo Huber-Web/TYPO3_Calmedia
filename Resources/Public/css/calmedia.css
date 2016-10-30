@@ -1,0 +1,179 @@
+.calMedia--list {
+    padding: 0px;
+    margin: 0px;
+    list-style: outside none none;
+}
+
+.calMedia--list-item {
+    list-style-type: none;
+    display: table-row;
+}
+
+.calMedia--list-item.even, .calMedia--list.week li:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.calMedia--list-item.odd, .calMedia--list.week li:nth-of-type(odd) {
+    background-color: #ffef89;
+}
+
+.calMedia--content {
+    width: 100%;
+    padding: 0.2em 0px;
+    text-decoration: none;
+    color: #230000;
+}
+
+.calMedia--cat, .calMedia--date, .calMedia--time, .calMedia--title, .calMedia--location {
+    float: left;
+    padding-left: 0.4em;
+    background: none;
+}
+
+.calMedia--date, .calMedia--time, .calMedia--title{
+	padding-top: 0.3em;
+}
+
+.calMedia--cat {
+    width: 1em;
+    margin: 0.3em;
+}
+
+.calMedia--date {
+    min-width: 8em;
+}
+
+.calMedia--time {
+    min-width: 3em;
+}
+
+.calMedia--title.week {
+    max-width: 25em;
+    min-width: 20em;
+}
+
+.calMedia--title.all {
+	max-width: 29.76em;
+}
+
+.calMedia--list.all li {
+    clear: both;
+}
+
+.calMedia--list-month.all {
+	background-color: #ffdd06;
+    border: 1px solid #fabb04;
+    display: block;
+    height: 1.5em;
+    padding-top: 0.2em;
+    text-align: center;
+    max-width: 40.4em;
+    min-width: 35.4em;
+}
+
+.calMedia--list-mon.action, .calMedia--dates li, .calMedia--list-month.action, .calMedia--list-item.week{
+    cursor: pointer;
+}
+
+.calMedia--list-month.all.year {
+	font-weight: bold;
+}
+
+.calMedia--list-day.all {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.calMedia--list-day.all.cur {
+	display: block;
+}
+
+.calMedia--list-day-item.all {
+    float: left;
+    height: 2.95em;
+    padding-top: 1em;
+    text-align: center;
+    width: 4.8em;
+    border: 1px solid #fabb04;
+    border-top: 2px solid #fabb04;
+}
+
+.calMedia--list-day-item.all.even {
+	background-color: #ffef89;
+}
+
+.calMedia--list-day-item.all.odd {
+	background-color: #ffdd06;
+}
+
+.calMedia--content.all {
+	display: block;
+	width: 35.5em;
+}
+
+.calMedia--dates.all {
+	float: left;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #fabb04;
+    border-bottom: 1px solid #fabb04;
+    border-top: 2px solid #fabb04; 
+}
+
+.calMedia--dates-item.all {
+	display: block;
+    min-width: 20em;
+    width: 70%;
+}
+
+.calMedia--dates-item.all.even {
+    background-color: #ffffff;
+}
+
+.calMedia--dates-item.all.odd {
+    background-color: #ffef89;
+}
+
+.holiday {
+	color: red;
+	font-weight: bold;
+}
+
+.week.holiday{
+	font-weight: inherit;
+}
+
+.calMedia--leg {
+    float: left;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.calMedia--leg_title {
+    padding-top: 0.3em;
+    width: 13.5em;
+}
+
+.calMedia--overlay {
+    background-color: white;
+    border: 1px solid #fabb04;
+    height: 10em;
+    left: 50%;
+    margin-left: -12.5em;
+    margin-top: -5em;
+    padding: 1em;
+    position: fixed;
+    top: 50%;
+    width: 25em;
+    z-index: 10;
+    display: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#map {
+	height: 20em;
+}
